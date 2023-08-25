@@ -1,0 +1,80 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  text-align: center;
+}
+
+.profile-pic {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.neon-text {
+  font-size: 48px;
+  color: #ffffff;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+}
+
+.segment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.segment {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.segment h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.segment-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.segment:hover {
+  background-color: rgba(0, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.segment:hover .segment-content {
+  max-height: 500px;
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+  }
+  50% {
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+  }
+}
+
+.neon-text {
+  animation: glow 2s infinite alternate;
+}
+.segment {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  border-radius: 12px; /* Add this line for rounded corners */
+}
+
+.segment:hover {
+  background-color: rgba(0, 255, 255, 0.3);
+  cursor: pointer;
+  border-radius: 12px; /* Ensure the rounded corners remain on hover */
+}
